@@ -9,6 +9,8 @@ public class Lab2 {
         calculateCircle();
         calculateTriangle();
         oddOrEven();
+        intToDouble();
+        doubleToInt();
 
     }
 
@@ -27,9 +29,9 @@ public class Lab2 {
         DecimalFormat df = new DecimalFormat("0.00");
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter the base-width of the triangle: ");
-        double triangleWidth = sc.nextInt();
+        double triangleWidth = sc.nextDouble();
         System.out.println("Please enter the height of the triangle: ");
-        double triangleHeight = sc.nextInt();
+        double triangleHeight = sc.nextDouble();
         double triArea = 0.5 * (triangleWidth * triangleHeight);
         System.out.println("The area of the triangle is " + df.format(triArea) + ".");
     }
@@ -48,5 +50,26 @@ public class Lab2 {
         }
     }
 
+    public static void intToDouble() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter a whole number to be converted to a single decimal point: ");
+        int wholeNumber = sc.nextInt();
+        double singleDecimal = (double) wholeNumber;
+        System.out.println("You entered " + wholeNumber + ", the new value is " + singleDecimal + ".");
+    }
 
+    // public static void letterToAscii () {
+        
+    // }
+
+    public static void doubleToInt() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter a number with decimals to be converted to a to a whole number(rounded properly): ");
+        double decimalNumber = sc.nextDouble();
+        int wholeNumber = (int) Math.round(decimalNumber);
+        System.out.println("You entered " + decimalNumber + ", the new value is " + wholeNumber + ".");
+
+    }
+
+    
 }
