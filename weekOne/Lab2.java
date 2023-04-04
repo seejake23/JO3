@@ -6,13 +6,13 @@ import java.text.DecimalFormat;
 
 public class Lab2 {
     public static void main(String[] args) {
-        // calculateCircle();
-        // calculateTriangle();
-        // oddOrEven();
-        // intToDouble();
+        calculateCircle();
+        calculateTriangle();
+        oddOrEven();
+        intToDouble();
         letterToAscii();
-        // doubleToInt();
-        // leapYear();
+        doubleToInt();
+        leapYear();
 
     }
 
