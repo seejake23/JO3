@@ -14,6 +14,10 @@ public class Lab1 {
         
         xor();
 
+        isFactor(5, 25);
+
+        isPerfect(12, 144);
+
 
     }
 
@@ -50,8 +54,51 @@ public class Lab1 {
         boolean a = true;
         boolean b = false; 
         boolean c = a ^ b;
-        System.out.println(c);
+        System.out.println(c + "\n");
         return c;
     }
 
- }
+    public static boolean isFactor(int k, int n) {
+        if(k * k == n) {
+            System.out.println(k + " is a factor of " + n);
+            return true;
+        } else {
+            System.out.println(k + " is not a factor of " + n);
+            return false;
+        }
+        
+    }
+
+    public static boolean isPerfect(int num1, int num2) {
+        if (num1 == 6 || num1 == 28 || num1 == 248) {
+            if(isFactor(num1, num2)) {
+                System.out.println(num1 + " is a perfect number and a factor of " + num2);
+            } else {
+                System.out.println(num1 + " is a perfect number and but not a factor of" + num2);
+            return true;
+            }
+        } 
+        else if (isFactor(num1, num2)) {
+            System.out.println((num1 + " is not perfect number and but is a factor of " + num2)); 
+        }
+        else {
+            if (!isFactor(num1, num2)) {
+                System.out.println(num1 + " is neither a perfect number nor a factor of " + num2);
+            return false;
+            }
+        }
+        return false;
+    }
+
+    public static boolean isPrime(int num) {
+        if(num <= 1) {
+            return false;
+        }
+        for(int i=2; i <= num; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
