@@ -5,18 +5,20 @@ public class Lab1 {
     public static void main(String[] args) {
         int maxNum = max3(25, 99, 11);
         System.out.println("The max value is " + maxNum);
-
+ 
         int minNum = min3(25, 99, 11);
         System.out.println("The min value is " + minNum);
-
+ 
         int middleNum = middle3(25, 99, 11);
         System.out.println("The middle value is " + middleNum);
         
         xor();
-
+ 
         isFactor(5, 25);
-
+        System.out.println("----------------------------------");    
         isPerfect(12, 144);
+        System.out.println("----------------------------------");
+        isPrime(13, 169);
 
 
     }
@@ -90,15 +92,19 @@ public class Lab1 {
         return false;
     }
 
-    public static boolean isPrime(int num) {
-        if(num <= 1) {
+    public static boolean isPrime(int k, int n) {
+        isFactor(k, n);
+        if(k <= 1) {
             return false;
         }
-        for(int i=2; i <= num; i++) {
-            if (num % i == 0) {
+        for(int i=2; i <= k/2; i++) {
+            if (k % i == 0) {
+                System.out.println(k + " is not prime");
                 return false;
             }
         }
+        System.out.println(k + " is prime");
         return true;
+        
     }
 }
