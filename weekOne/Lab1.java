@@ -61,7 +61,7 @@ public class Lab1 {
     }
 
     public static boolean isFactor(int k, int n) {
-        if(k * k == n) {
+        if(n % k == 0) {
             System.out.println(k + " is a factor of " + n);
             return true;
         } else {
@@ -97,7 +97,7 @@ public class Lab1 {
         if(k <= 1) {
             return false;
         }
-        for(int i=2; i <= k/2; i++) {
+        for(int i=2; i < k; i++) {
             if (k % i == 0) {
                 System.out.println(k + " is not prime");
                 return false;
